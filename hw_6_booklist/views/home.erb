@@ -1,0 +1,16 @@
+<% @latest.each do |book_hash| %>  
+    <div class="row">
+        <div class="span12">
+        	<% if @index == 20 %>
+        	<% break %>
+        	<% else %>
+        			<% if book_hash["Class"] == "Fiction"  %>
+            					<h2> Title: <%= book_hash['Title'] %></h2>
+           					    <h2> Author: <%= book_hash['Author'] %></h2>
+            					<h2> Description: <%= book_hash['BriefDescription'] %></h2>
+           						 <% @index = @index + 1 %>
+           			<% end %>
+            <% end %>
+        </div>
+    </div>
+<% end %> 
