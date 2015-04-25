@@ -1,0 +1,11 @@
+<h1> Latitude = <%= @lat %></h1>
+<h1> Longitude = <%= @long %></h1>
+<h1> Zip Code = <%= @zip %></h1>
+<h1> Current temperature at <%= @zip %> is <%= @current_temp %></h1>
+<h1> Max temperature at <%= @zip %> is <%= @max_temp %></h1>
+<h1> Min temperature at <%= @zip %> is <%= @min_temp %></h1>
+<% if @max_temp > 74  %>
+	<h2> It's a day for Shorts! </h2>
+<% elsif @max_temp <= 74  %>
+	<h2> It's a day for Pants</h2>
+<%	end %>
