@@ -1,0 +1,19 @@
+<p>
+your choice: <b> <%= @user %> </b>
+</p>
+<p>
+comp choice: <b> <%= @comp %> </b>
+</p>
+<% if @user == "rock" && @comp == "scissor" %>
+	<h2> You won :) </h2>
+<% elsif @user == "paper" && @comp == "rock" %>
+	<h2> You won :) </h2> 
+<% elsif @user == "scissor" && @comp == "paper" %>
+	<h2> You won :) </h2> 
+<% elsif @user == @comp %>
+	<h2> You tied :| </h2> 
+<% else %>
+	<h2> You lost :( </h2>
+<% end %>
+
+
