@@ -32,9 +32,9 @@ get "/zip_temp" do
 	#parse the forecast data and get the temperature
 	@current_temp = forecast_data["currently"]["temperature"]
 	#max temp
-	@max_temp = forecast_data["daily"]["data"].last["temperatureMax"]
+	@max_temp = forecast_data["daily"]["data"].first["temperatureMax"]
 	#min temp
-	@min_temp = forecast_data["daily"]["data"].last["temperatureMin"]	
+	@min_temp = forecast_data["daily"]["data"].first["temperatureMin"]	
 	erb	:process	
 
 end
